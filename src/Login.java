@@ -20,7 +20,7 @@ public class Login {
             public void actionPerformed(ActionEvent e) {
                 String url = "jdbc:mysql://localhost:3306/Concursos";
                 String user = "root";
-                String password = "1234";
+                String password = "123456";
 
                 try (Connection conexionMYSQL = DriverManager.getConnection(url, user, password)) {
 
@@ -35,12 +35,11 @@ public class Login {
 
                         JOptionPane.showMessageDialog(null, "Login Correcto! Bienvenid@ " + textField1.getText());
 
-                        JFrame frame = new JFrame("LOGIN");
-
-                        frame.setContentPane(new Login().loginsito);
+                        JFrame frame = new JFrame("Informacion");
+                        frame.setContentPane(new MostarDatos().Datitos);
                         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                         frame.setSize(500, 300);
-                        frame.setPreferredSize(new Dimension(300, 300));
+                        frame.setPreferredSize(new Dimension(600, 300));
                         frame.setLocationRelativeTo(null);
                         frame.pack();
                         frame.setVisible(true);
